@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{errors}}
+<!--adds errors to top of page after the fact-->
+<h1>boop</h1>
+<!--testing boop-->
+{% for Car in model %}
+<p>{{Car}}</p>
+{%endfor%}
+<!--this lists all prior models-->
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+{{form.as_p}}
+    <button>Submit</button>
+</form>
+<!--this adds a car to new models-->
+</body>
+</html>
